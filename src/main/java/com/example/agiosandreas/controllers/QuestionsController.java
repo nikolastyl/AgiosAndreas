@@ -25,4 +25,7 @@ public class QuestionsController {
         return questionsRepository.getQuestionsForPart2();
     }
 
+    @GetMapping("/for-module-3")
+    public List<MultipleChoiceQuestions> getQuestions3() {return questionsRepository.getQuestionsForPart3();}
+
 }

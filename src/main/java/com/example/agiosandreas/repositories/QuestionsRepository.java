@@ -15,6 +15,10 @@ public interface QuestionsRepository extends JpaRepository<MultipleChoiceQuestio
     @Query("SELECT DISTINCT q FROM MultipleChoiceQuestions q WHERE q.moduleId = 2 ")
     List<MultipleChoiceQuestions> getQuestionsForPart2();
 
+    @Query("SELECT DISTINCT q FROM MultipleChoiceQuestions q WHERE q.moduleId = 3 ")
+    List<MultipleChoiceQuestions> getQuestionsForPart3();
+
+
 
 }
 

@@ -26,4 +26,8 @@ public class TheoryPartController {
         return theoryPartRepository.getModule2Parts();
     }
 
+    @GetMapping("/module-3")
+    public List<TheoryPart> getTheoryParts3() {return theoryPartRepository.getModule3Parts();}
+
+
 }

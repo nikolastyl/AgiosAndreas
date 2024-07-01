@@ -73,7 +73,7 @@ public class AnswerController {
 
         if (incorrectQuestions.size() < 5) {
             List<Integer> numbers = new ArrayList<>();
-            for (int i = 1; i <= 20; i++) {
+            for (int i = 1; i <= 26; i++) {//αλλαγη στον αριθμο ερωτησεων
                 numbers.add(i);
             }
 
