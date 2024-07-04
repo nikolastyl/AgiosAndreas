@@ -15,6 +15,6 @@ public interface TheoryPartRepository extends JpaRepository<TheoryPart, Long> {
     @Query("SELECT DISTINCT t FROM TheoryPart t WHERE t.moduleId = 2 ")
     List<TheoryPart> getModule2Parts();
 
-   @Query("SELECT DISTINCT t FROM TheoryPart t WHERE t.moduleId = 3 ")
-   List<TheoryPart> getModule3Parts();
+    @Query("SELECT DISTINCT t FROM TheoryPart t WHERE t.moduleId = 3 ")
+    List<TheoryPart> getModule3Parts();
 }
