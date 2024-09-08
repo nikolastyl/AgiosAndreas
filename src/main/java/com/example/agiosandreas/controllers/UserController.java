@@ -16,7 +16,7 @@ public class UserController {
     private UserRepository userRepository;
 
     @GetMapping("/check-username")
-    public String checkUsername(@RequestParam String username) {
+    public String checkUsername(@RequestParam String username,String password) {
         // check the length of username
         if (username.length() > 15) {
             return "Το όνομα χρήστη είναι πολύ μεγάλο, δοκίμασε ένα κατω απο 15 χαρακτήρες";
@@ -24,7 +24,7 @@ public class UserController {
         if (username.equals("")){
             return "Παρακαλώ συμπλήρωσε ένα όνομα χρήστη";
         }
-        boolean exists = userRepository.existsByUsername(username);
+        boolean exists = userRepository.existsUserByUsername(username);
         if(exists){
             return "Το όνομα χρήστη υπάρχει ήδη. Παρακαλώ διάλεξε άλλο όνομα.";}
             else{
@@ -32,6 +32,7 @@ public class UserController {
             return "";
             }
     }
+
 
     @GetMapping("/find-id")
     public Long findId(@RequestParam("username") String username){
