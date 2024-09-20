@@ -22,7 +22,7 @@ public class UserController {
     private  final UserService userService;
 
 
-    public UserController(UserRepository userRepository, UserService userService, JwtService jwtService) {
+    public UserController( UserService userService) {
         this.userService = userService;
 
     }

@@ -1,8 +1,7 @@
 package com.example.agiosandreas.service;
 
-import com.example.agiosandreas.repositories.UserRepository;
 import com.example.agiosandreas.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.agiosandreas.repositories.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
