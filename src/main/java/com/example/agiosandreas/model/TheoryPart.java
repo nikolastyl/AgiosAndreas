@@ -1,4 +1,4 @@
-package com.example.agiosandreas.users;
+package com.example.agiosandreas.model;
 
 import jakarta.persistence.*;
 

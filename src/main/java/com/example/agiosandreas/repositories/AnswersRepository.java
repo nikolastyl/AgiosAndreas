@@ -1,8 +1,8 @@
 package com.example.agiosandreas.repositories;
 
-import com.example.agiosandreas.users.Answers;
-import com.example.agiosandreas.users.MultipleChoiceQuestions;
-import com.example.agiosandreas.users.TheoryPart;
+import com.example.agiosandreas.model.Answers;
+import com.example.agiosandreas.model.MultipleChoiceQuestions;
+import com.example.agiosandreas.model.TheoryPart;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

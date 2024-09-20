@@ -8,7 +8,7 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-@EntityScan(basePackages = "com.example.agiosandreas.users")
+@EntityScan(basePackages = "com.example.agiosandreas.model")
 @SpringBootApplication
 public class AgiosAndreasApplication {
 

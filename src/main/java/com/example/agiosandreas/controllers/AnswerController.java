@@ -1,9 +1,9 @@
 package com.example.agiosandreas.controllers;
 
 import com.example.agiosandreas.repositories.AnswersRepository;
-import com.example.agiosandreas.users.Answers;
-import com.example.agiosandreas.users.MultipleChoiceQuestions;
-import com.example.agiosandreas.users.TheoryPart;
+import com.example.agiosandreas.model.Answers;
+import com.example.agiosandreas.model.MultipleChoiceQuestions;
+import com.example.agiosandreas.model.TheoryPart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
