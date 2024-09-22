@@ -1,5 +1,6 @@
 package com.example.agiosandreas.config;
 
+import com.example.agiosandreas.service.UserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
@@ -27,22 +28,28 @@ public class SecurityConfig {
     private final AuthenticationProvider authenticationProvider;
     private final JwtFilter jwtFilter;
 
+    private final UserService userService;
 
 
 
 
     private static final String[] WHITE_LIST_URL={"/login","/register","/authenticate"};
 
-    public SecurityConfig( AuthenticationProvider authenticationProvider,JwtFilter jwtFilter) {
+    public SecurityConfig(AuthenticationProvider authenticationProvider, JwtFilter jwtFilter, UserService userService) {
 
         this.authenticationProvider = authenticationProvider;
         this.jwtFilter = jwtFilter;
+        this.userService = userService;
     }
 
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http)throws Exception{
        return http.
+               requiresChannel(chanel->chanel.anyRequest().requiresSecure()).
+               x509(
+                       x509->x509.subjectPrincipalRegex("CN=(.*)"))
+               .userDetailsService(userService).
                cors(
                        (cors)->cors.configurationSource(corsFilterSource())
                ).
