@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
@@ -28,14 +29,14 @@ public class SecurityConfig {
     private final AuthenticationProvider authenticationProvider;
     private final JwtFilter jwtFilter;
 
-    private final UserService userService;
+    private final UserDetailsService userService;
 
 
 
 
     private static final String[] WHITE_LIST_URL={"/login","/register","/authenticate"};
 
-    public SecurityConfig(AuthenticationProvider authenticationProvider, JwtFilter jwtFilter, UserService userService) {
+    public SecurityConfig(AuthenticationProvider authenticationProvider, JwtFilter jwtFilter, UserDetailsService userService) {
 
         this.authenticationProvider = authenticationProvider;
         this.jwtFilter = jwtFilter;

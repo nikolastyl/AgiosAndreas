@@ -70,6 +70,11 @@ public class UserController {
 
     }
 
+    @PostMapping("/logout")
+    public void logout(@RequestBody String message){
+
+    }
+
 /*
     public void createUser( User user) {
         System.out.println(user.getUsername());

@@ -16,9 +16,6 @@ public class AgiosAndreasApplication {
         SpringApplication.run(AgiosAndreasApplication.class, args);
     }
 
-    @Bean
-    public RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder, SslBundles sslBundles) {
-        return restTemplateBuilder.setSslBundle(sslBundles.getBundle("secure-service")).build();
-    }
+
 
 }
